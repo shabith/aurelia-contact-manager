@@ -1,0 +1,26 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./styles.css"></require>
+  <require from="./contact-list"></require>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <i class="fa fa-user"></i>
+        <span>Contacts</span>
+      </a>
+      <a click.delegate="addNew()" route-href="route: new-contact;"  id="addContact" type="button" class="btn btn-info">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Contact
+      </a>
+    </div>
+  </nav>
+
+  <loading-indicator loading.bind="router.isNavigating || api.isRequesting"></loading-indicator>
+
+  <div class="container">
+    <div class="row">
+      <contact-list class="col-md-4"></contact-list>
+      <router-view class="col-md-8"></router-view>
+    </div>
+  </div>
+</template>

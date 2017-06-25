@@ -1,0 +1,8 @@
+{
+  "name": "contact-manager",
+  "version": "1.0.0",
+  "description": "aurelia contact manager tutorial",
+  "main": "index.js",
+  "author": "Shabith Ishan <shabith.ishan@gmail.com>",
+  "license": "MIT"
+}
